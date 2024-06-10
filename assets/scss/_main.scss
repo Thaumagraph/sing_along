@@ -2,12 +2,13 @@ main {
   display: grid;
   grid-template-columns: 1fr 5fr;
   gap: $gap;
-  height: 100%;
+  height: 97vh;
 
   #left {
     display: grid;
     grid-template-rows: 2fr 10fr 1fr;
     gap: $gap;
+    height: 97vh;
 
     #quick_info {
       @include box(100%, 100%);
@@ -16,6 +17,12 @@ main {
 
   #right {
     @include box(100%, 100%);
+    height: 97vh;
+
+    .scrollable-element {
+      height: 75%;
+      overflow-y: scroll;
+    }
 
     #albums {
       display: grid;
