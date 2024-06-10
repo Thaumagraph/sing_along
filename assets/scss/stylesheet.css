@@ -40,7 +40,7 @@ main {
   display: grid;
   grid-template-columns: 1fr 5fr;
   gap: 0.5rem;
-  height: 97vh;
+  height: 96vh;
 }
 main #left {
   display: grid;
