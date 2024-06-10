@@ -116,7 +116,8 @@
 }
 @media screen and (max-width: 700px) {
   #left {
-    display: none;
+    display: inline-block;
+    height: 6vh;
   }
 }
 
@@ -155,6 +156,11 @@
 }
 #audio_player > * {
   height: 30px;
+}
+@media screen and (max-width: 700px) {
+  #audio_player {
+    display: block;
+  }
 }
 
 main {

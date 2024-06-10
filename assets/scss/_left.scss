@@ -1,14 +1,15 @@
 #left {
-    display: grid;
-    grid-template-rows: 2fr 10fr 1fr;
-    gap: $gap;
-    height: 97vh;
+  display: grid;
+  grid-template-rows: 2fr 10fr 1fr;
+  gap: $gap;
+  height: 97vh;
 
-    #quick_info {
-      @include box(100%, 100%);
-    }
-
-    @media screen and (max-width: 700px) {
-        display: none;
-    }
+  #quick_info {
+    @include box(100%, 100%);
   }
+
+  @media screen and (max-width: 700px) {
+    display: inline-block;
+    height: 6vh;
+  }
+}
