@@ -1,19 +1,21 @@
-header {
-  @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-  /* Base styling */
-  /* Black Drip */
-}
-header .drip-section {
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Base styling */
+.drip-section {
   -webkit-filter: contrast(5);
   display: flex;
   justify-content: center;
   align-items: center;
   filter: contrast(5);
-  background-color: #efeffe;
+  // filter: contrast(5);
+  background-color: $bcc;
   width: 100vw;
+  // height: 100vh;
   overflow: hidden;
 }
-header .drip-container-black {
+
+/* Black Drip */
+.drip-container-black {
   display: flex;
   position: relative;
   justify-content: center;
@@ -24,16 +26,18 @@ header .drip-container-black {
   height: 300px;
   min-height: 300px;
 }
-header .drip-container-black h1 {
+.drip-container-black h1 {
+  -webkit-filter: blur(5px);
   filter: blur(5px);
   -webkit-text-stroke: 0.1vw rgb(255, 255, 255);
-  color: #52a49e;
+  color: $drip_accent;
   font-size: 250px;
   font-family: "Montserrat", sans-serif;
   text-shadow: 0.5rem 0.5rem 0rem rgb(21, 0, 0);
   text-transform: uppercase;
 }
-header .drip-one-black {
+
+.drip-one-black {
   -webkit-filter: blur(5px);
   position: absolute;
   top: 210px;
@@ -44,10 +48,11 @@ header .drip-one-black {
   animation-iteration-count: infinite;
   animation-name: dripOneB;
   border-radius: 50%;
-  background-color: #52a49e;
+  background-color: $drip_accent;
   width: 0px;
   height: 0px;
 }
+
 @keyframes dripOneB {
   0% {
     top: 200px;
@@ -73,7 +78,8 @@ header .drip-one-black {
     height: 50px;
   }
 }
-header .drip-two-black {
+
+.drip-two-black {
   -webkit-filter: blur(5px);
   position: absolute;
   top: 50%;
@@ -84,7 +90,7 @@ header .drip-two-black {
   animation-iteration-count: infinite;
   animation-name: dripTwoB;
   border-radius: 50%;
-  background-color: #52a49e;
+  background-color: $drip_accent;
   width: 0px;
   height: 0px;
 }
@@ -109,7 +115,8 @@ header .drip-two-black {
     height: 60px;
   }
 }
-header .drip-three-black {
+
+.drip-three-black {
   -webkit-filter: blur(5px);
   position: absolute;
   top: 50%;
@@ -120,7 +127,7 @@ header .drip-three-black {
   animation-iteration-count: infinite;
   animation-name: dripTwoB;
   border-radius: 50%;
-  background-color: #52a49e;
+  background-color: $drip_accent;
   width: 0px;
   height: 0px;
 }
@@ -145,7 +152,7 @@ header .drip-three-black {
     height: 60px;
   }
 }
-header .drip-four-black {
+.drip-four-black {
   -webkit-filter: blur(5px);
   position: absolute;
   top: 100px;
@@ -157,7 +164,7 @@ header .drip-four-black {
   animation-iteration-count: infinite;
   animation-name: dripFourB;
   border-radius: 50%;
-  background-color: #52a49e;
+  background-color: $drip_accent;
   width: 0px;
   height: 0px;
 }
@@ -182,7 +189,8 @@ header .drip-four-black {
     height: 60px;
   }
 }
-header .drip-five-black {
+
+.drip-five-black {
   -webkit-filter: blur(5px);
   position: absolute;
   top: 100px;
@@ -194,7 +202,7 @@ header .drip-five-black {
   animation-iteration-count: infinite;
   animation-name: dripFiveB;
   border-radius: 50%;
-  background-color: #52a49e;
+  background-color: $drip_accent;
   width: 0px;
   height: 0px;
 }
@@ -222,7 +230,8 @@ header .drip-five-black {
     height: 60px;
   }
 }
-header .drip-six-black {
+
+.drip-six-black {
   -webkit-filter: blur(5px);
   position: absolute;
   top: 100px;
@@ -234,7 +243,7 @@ header .drip-six-black {
   animation-iteration-count: infinite;
   animation-name: dripSixB;
   border-radius: 50%;
-  background-color: #52a49e;
+  background-color: $drip_accent;
   width: 0px;
   height: 0px;
 }
@@ -259,12 +268,3 @@ header .drip-six-black {
     height: 60px;
   }
 }
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  margin: 1vw;
-}/*# sourceMappingURL=stylesheet.css.map */
