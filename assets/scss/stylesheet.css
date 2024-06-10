@@ -1,263 +1,174 @@
-header {
-  @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-  /* Base styling */
-  /* Black Drip */
+.profile_picture {
+  border-radius: 50%;
 }
-header .drip-section {
-  -webkit-filter: contrast(5);
+
+#audio_player {
+  background: linear-gradient(rgb(30, 30, 60), rgb(0, 0, 30));
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  filter: contrast(5);
-  background-color: #efeffe;
-  width: 100vw;
-  overflow: hidden;
 }
-header .drip-container-black {
-  display: flex;
+#audio_player > * {
+  height: 30px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  gap: 0.5rem;
+  height: 100%;
+}
+main #left {
+  display: grid;
+  grid-template-rows: 2fr 10fr 1fr;
+  gap: 0.5rem;
+}
+main #left #quick_info {
+  background: linear-gradient(rgb(30, 30, 60), rgb(0, 0, 30));
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+main #right {
+  background: linear-gradient(rgb(30, 30, 60), rgb(0, 0, 30));
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+main #right #albums {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+  padding: 1.5rem;
+}
+main #right h2 {
+  padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+}
+main #right .album {
   position: relative;
+  transition: 150ms;
+  border-radius: 10px;
+  display: flex;
   justify-content: center;
+  width: 100px;
+  height: 150px;
+}
+main #right .album .visualizer {
+  display: hidden;
+  bottom: 50px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  position: absolute;
+  gap: 5px;
+}
+main #right .album .visualizer .bar {
+  border-radius: 1000px;
+  opacity: 0%;
+  animation: bounce 1s infinite;
+  box-shadow: 0 0rem 3px rgb(0, 0, 0);
+  background-color: #e1e1e1;
+  width: 3px;
+  height: 10px;
+}
+main #right .album .visualizer .bar:nth-child(2) {
+  animation-delay: 0.1s;
+}
+main #right .album .visualizer .bar:nth-child(3) {
+  animation-delay: 0.2s;
+}
+main #right .album .visualizer .bar:nth-child(4) {
+  animation-delay: 0.3s;
+}
+main #right .album .visualizer .bar:nth-child(5) {
+  animation-delay: 0.4s;
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(2);
+  }
+}
+main #right .album .playlist_add {
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  width: 30px;
+}
+main #right .album .playlist_add img {
+  width: 100%;
+  height: auto;
+}
+main #right .album figure {
+  width: 100px;
+  height: 100px;
+}
+main #right .album img {
+  width: auto;
+  height: 100%;
+  overflow-x: hidden;
+  border-radius: 10px;
+}
+main #right .album figcaption {
+  font-size: 1rem;
+  text-align: center;
+}
+main #right .album:hover {
+  scale: 1.1;
+  transition: 150ms;
+}
+main #right .album:hover .bar {
+  opacity: 100%;
+  transition: 150ms;
+}
+main #right .album:hover img {
+  box-shadow: 0 0.5rem 0.3rem black;
+}
+main #right .album:hover figcaption {
+  text-shadow: 0 1rem 0 rgb(0, 0, 0);
+}
+
+header {
+  background: linear-gradient(rgb(30, 30, 60), rgb(0, 0, 30));
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space_around;
+  margin-bottom: 0.5rem;
   align-items: center;
-  margin: 0 auto;
-  width: 655px;
-  min-width: 655px;
-  height: 300px;
-  min-height: 300px;
 }
-header .drip-container-black h1 {
-  filter: blur(5px);
-  -webkit-text-stroke: 0.1vw rgb(255, 255, 255);
-  color: #52a49e;
-  font-size: 250px;
-  font-family: "Montserrat", sans-serif;
-  text-shadow: 0.5rem 0.5rem 0rem rgb(21, 0, 0);
-  text-transform: uppercase;
+header > * {
+  margin: 0.5rem;
 }
-header .drip-one-black {
-  -webkit-filter: blur(5px);
+header #search_bar_container {
+  position: relative;
+  height: 25px;
+}
+header #search_bar_container img {
   position: absolute;
-  top: 210px;
-  left: -15px;
-  filter: blur(5px);
-  animation-duration: 2500ms;
-  animation-timing-function: ease;
-  animation-iteration-count: infinite;
-  animation-name: dripOneB;
+  right: -10px;
+  bottom: -3px;
+}
+header #search_bar_container #search_bar {
+  color: #e1e1e1;
+  padding: 1px 0 1px 10px;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  background: #000000;
+}
+header .profile_picture {
   border-radius: 50%;
-  background-color: #52a49e;
-  width: 0px;
-  height: 0px;
-}
-@keyframes dripOneB {
-  0% {
-    top: 200px;
-    width: 0px;
-    height: 0px;
-  }
-  10% {
-    width: 40px;
-    height: 50px;
-  }
-  40% {
-    width: 40px;
-    height: 50px;
-  }
-  50% {
-    top: 225px;
-    width: 40px;
-    height: 50px;
-  }
-  100% {
-    top: 1000px;
-    width: 40px;
-    height: 50px;
-  }
-}
-header .drip-two-black {
-  -webkit-filter: blur(5px);
-  position: absolute;
-  top: 50%;
-  left: 120px;
-  filter: blur(5px);
-  animation-duration: 5000ms;
-  animation-timing-function: ease;
-  animation-iteration-count: infinite;
-  animation-name: dripTwoB;
-  border-radius: 50%;
-  background-color: #52a49e;
-  width: 0px;
-  height: 0px;
-}
-@keyframes dripTwoB {
-  0% {
-    top: 65px;
-    width: 0px;
-    height: 0px;
-  }
-  15% {
-    width: 50px;
-    height: 60px;
-  }
-  50% {
-    top: 225px;
-    width: 50px;
-    height: 60px;
-  }
-  100% {
-    top: 1000px;
-    width: 50px;
-    height: 60px;
-  }
-}
-header .drip-three-black {
-  -webkit-filter: blur(5px);
-  position: absolute;
-  top: 50%;
-  left: 300px;
-  filter: blur(5px);
-  animation-duration: 2500ms;
-  animation-timing-function: ease;
-  animation-iteration-count: infinite;
-  animation-name: dripTwoB;
-  border-radius: 50%;
-  background-color: #52a49e;
-  width: 0px;
-  height: 0px;
-}
-@keyframes dripThreeB {
-  0% {
-    top: 65px;
-    width: 0px;
-    height: 0px;
-  }
-  15% {
-    width: 50px;
-    height: 60px;
-  }
-  50% {
-    top: 225px;
-    width: 50px;
-    height: 60px;
-  }
-  100% {
-    top: 1000px;
-    width: 50px;
-    height: 60px;
-  }
-}
-header .drip-four-black {
-  -webkit-filter: blur(5px);
-  position: absolute;
-  top: 100px;
-  left: 460px;
-  filter: blur(5px);
-  animation-duration: 2500ms;
-  animation-timing-function: ease;
-  animation-delay: 250ms;
-  animation-iteration-count: infinite;
-  animation-name: dripFourB;
-  border-radius: 50%;
-  background-color: #52a49e;
-  width: 0px;
-  height: 0px;
-}
-@keyframes dripFourB {
-  0% {
-    top: 65px;
-    width: 0px;
-    height: 0px;
-  }
-  15% {
-    width: 50px;
-    height: 60px;
-  }
-  50% {
-    top: 225px;
-    width: 50px;
-    height: 60px;
-  }
-  100% {
-    top: 1000px;
-    width: 50px;
-    height: 60px;
-  }
-}
-header .drip-five-black {
-  -webkit-filter: blur(5px);
-  position: absolute;
-  top: 100px;
-  left: 530px;
-  filter: blur(5px);
-  animation-duration: 5000ms;
-  animation-timing-function: ease;
-  animation-delay: 250ms;
-  animation-iteration-count: infinite;
-  animation-name: dripFiveB;
-  border-radius: 50%;
-  background-color: #52a49e;
-  width: 0px;
-  height: 0px;
-}
-@keyframes dripFiveB {
-  0% {
-    top: 65px;
-    left: 550px;
-    width: 0px;
-    height: 0px;
-  }
-  15% {
-    left: 530px;
-    width: 50px;
-    height: 60px;
-  }
-  50% {
-    top: 220px;
-    left: 535px;
-    width: 50px;
-    height: 60px;
-  }
-  100% {
-    top: 1000px;
-    width: 50px;
-    height: 60px;
-  }
-}
-header .drip-six-black {
-  -webkit-filter: blur(5px);
-  position: absolute;
-  top: 100px;
-  left: 610px;
-  filter: blur(5px);
-  animation-duration: 3500ms;
-  animation-timing-function: ease;
-  animation-delay: 250ms;
-  animation-iteration-count: infinite;
-  animation-name: dripSixB;
-  border-radius: 50%;
-  background-color: #52a49e;
-  width: 0px;
-  height: 0px;
-}
-@keyframes dripSixB {
-  0% {
-    top: 60px;
-    width: 0px;
-    height: 0px;
-  }
-  15% {
-    width: 50px;
-    height: 60px;
-  }
-  50% {
-    top: 225px;
-    width: 50px;
-    height: 60px;
-  }
-  100% {
-    top: 1000px;
-    width: 50px;
-    height: 60px;
-  }
+  width: auto;
+  height: 3rem;
 }
 
 * {
@@ -266,5 +177,12 @@ header .drip-six-black {
 }
 
 body {
-  margin: 1vw;
+  position: relative;
+  margin: 0.5rem;
+  background: linear-gradient(#010101, #010101, #010101, #0d4c5f);
+  background-color: #000000;
+  height: 97vh;
+  overflow: hidden;
+  color: #e1e1e1;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }/*# sourceMappingURL=stylesheet.css.map */

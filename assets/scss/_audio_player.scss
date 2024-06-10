@@ -1,0 +1,9 @@
+#audio_player {
+  @include box(100%, 100%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  > * {
+    height: 30px;
+  }
+}

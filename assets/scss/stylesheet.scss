@@ -1,6 +1,9 @@
 @import "./variables";
-@import "./components/display";
+@import "./mixins";
 
+@import "./profile_picture";
+@import "./audio_player";
+@import "./main";
 @import "./nav";
 @import "./header";
 @import "./slide_show";
@@ -10,9 +13,14 @@
 }
 
 body {
-    & {
-        margin: 1vw;
-    }
-  main {
+  & {
+    position: relative;
+    margin: $gap;
+    background: linear-gradient(#010101, #010101, #010101, #0d4c5f);
+    background-color: $bcc;
+    height: 97vh;
+    overflow: hidden;
+    color: $text;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   }
 }

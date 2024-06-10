@@ -1,0 +1,36 @@
+@mixin flex($justify_content) {
+  display: flex;
+  justify-content: $justify_content;
+}
+
+@mixin round_corners($amount) {
+  border-radius: $amount;
+}
+
+@mixin grid($times, $column, $gap) {
+  display: grid;
+  grid-template-columns: repeat($times, $column);
+  gap: $gap;
+}
+
+@mixin flex($type) {
+  display: flex;
+  justify-content: $type;
+}
+
+@mixin gradient($color1, $color2) {
+  background: linear-gradient($color1, $color2);
+}
+
+@mixin box($width, $height) {
+  @include gradient($fade_top, $fade_bottom);
+  width: $width;
+  height: $height;
+  @include round_corners($corner_soft);
+}
+
+@mixin center {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}

@@ -1,3 +1,35 @@
 header {
-    @import "./drip";
+  @include box(100%, 100%);
+  @include flex(space_around);
+  margin-bottom: $gap;
+  align-items: center;
+  > * {
+    margin: $gap;
+  }
+
+  #search_bar_container {
+    & {
+      position: relative;
+      height: 25px;
+    }
+    img {
+      position: absolute;
+      right: -10px;
+      bottom: -3px;
+    }
+    #search_bar {
+      color: $text;
+      padding: 1px 0 1px 10px;
+      height: 100%;
+      width: 100%;
+      @include round_corners($corner_soft);
+      background: $bcc;
+    }
+  }
+
+  .profile_picture {
+    @include round_corners(50%);
+    width: auto;
+    height: 3rem;
+  }
 }
