@@ -3,11 +3,6 @@
   width: 10px;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-  // background: $bcc;
-}
-
 /* Handle */
 ::-webkit-scrollbar-thumb {
   @include box(1px, 1px);

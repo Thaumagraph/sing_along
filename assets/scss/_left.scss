@@ -1,0 +1,10 @@
+#left {
+    display: grid;
+    grid-template-rows: 2fr 10fr 1fr;
+    gap: $gap;
+    height: 97vh;
+
+    #quick_info {
+      @include box(100%, 100%);
+    }
+  }
