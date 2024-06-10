@@ -96,16 +96,6 @@ main #right .album .visualizer .bar:nth-child(5) {
     transform: scaleY(2);
   }
 }
-main #right .album .playlist_add {
-  position: absolute;
-  top: -1rem;
-  right: -1rem;
-  width: 30px;
-}
-main #right .album .playlist_add img {
-  width: 100%;
-  height: auto;
-}
 main #right .album figure {
   width: 100px;
   height: 100px;
